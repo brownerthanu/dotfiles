@@ -21,62 +21,72 @@ Plugin 'tcomment'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ivanov/vim-ipython'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-easymotion'
 
 filetype plugin indent on     " required
 
 """""" Configs 
 
 " let youcompleteme collect matches from ctags files
-let g:ycm_collect_identifiers_from_tags_files = 1
+ let g:ycm_collect_identifiers_from_tags_files = 1
 
-" ultisnips remap of trigger keys
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsEditSplit="vertical"
+ " ultisnips remap of trigger keys
+ let g:UltiSnipsExpandTrigger="<c-j>"
+ let g:UltiSnipsJumpForwardTrigger="<c-j>"
+ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+ let g:UltiSnipsEditSplit="vertical"
 
-" for airline
-" install the source code pro powerline fonts from https://github.com/Lokaltog/powerline-fonts
-set laststatus=2
-set ttimeoutlen=50
-set encoding=utf-8
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-set guifont=Source\ Code\ Pro\ for\ Powerline
+ " for airline
+ " install the source code pro powerline fonts from https://github.com/Lokaltog/powerline-fonts
+ set laststatus=2
+ set ttimeoutlen=50
+ set encoding=utf-8
+ let g:airline_powerline_fonts = 1
+ let g:airline#extensions#tabline#enabled = 1
+ let g:airline#extensions#tabline#show_buffers = 0
+ set guifont=Source\ Code\ Pro\ for\ Powerline
 
-" make tabs be nice
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set autoindent
-set cindent
+ " NERDTree
+ let g:NERDTreeMapOpenVSplit = 'v'
+ let g:NERDTreeMapOpenSplit = 's'
+ map <C-n> :NERDTreeToggle<CR>
 
-" other stuff
-set number
-set relativenumber
-set smartcase "searches are case sensitive only if there are caps 
-set hlsearch
-set splitbelow
-set splitright
+ " make tabs be nice
+ set tabstop=4
+ set shiftwidth=4
+ set expandtab
+ set autoindent
+ set cindent
 
-" load the IPython command
-source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
+ " other stuff
+ set number
+ set relativenumber
+ set smartcase "searches are case sensitive only if there are caps 
+ set hlsearch
+ set splitbelow
+ set splitright
+ syntax enable
 
-"suggested additions from: http://items.sjbach.com/319
-set hidden
-nnoremap ' `
-nnoremap ` '
-let mapleader = ","
-set history=1000
-runtime macros/matchit.vim
-set wildmenu
-set wildmode=list:longest
-set title
-set scrolloff=3
+ " load the IPython command
+ source ~/.vim/bundle/vim-ipython/ftplugin/python/ipy.vim
 
-" Code Folding
-set foldmethod=indent   "fold based on indent
-set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
+ "suggested additions from: http://items.sjbach.com/319
+ set hidden
+ nnoremap ' `
+ nnoremap ` '
+ let mapleader = ","
+ set history=1000
+ runtime macros/matchit.vim
+ set wildmenu
+ set wildmode=list:longest
+ set title
+ set scrolloff=3
 
+ " Code Folding
+ set foldmethod=indent   "fold based on indent
+ set foldnestmax=10      "deepest fold is 10 levels
+ set nofoldenable        "dont fold by default
+ set foldlevel=1         "this is just what i use
+
+" Pathogen
+execute pathogen#infect()
