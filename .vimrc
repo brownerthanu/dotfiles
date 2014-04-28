@@ -88,5 +88,3 @@ filetype plugin indent on     " required
  set nofoldenable        "dont fold by default
  set foldlevel=1         "this is just what i use
 
-" Pathogen
-execute pathogen#infect()
