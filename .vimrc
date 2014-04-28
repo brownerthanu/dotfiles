@@ -44,7 +44,7 @@ filetype plugin indent on     " required
  let g:airline_powerline_fonts = 1
  let g:airline#extensions#tabline#enabled = 1
  let g:airline#extensions#tabline#show_buffers = 0
- set guifont=Source\ Code\ Pro\ for\ Powerline
+"  set guifont=Source\ Code\ Pro\ for\ Powerline
 
  " NERDTree
  let g:NERDTreeMapOpenVSplit = 'v'
