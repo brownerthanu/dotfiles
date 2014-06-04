@@ -19,7 +19,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tcomment'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'ivanov/vim-ipython'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Lokaltog/vim-easymotion'
 
@@ -60,7 +59,6 @@ filetype plugin indent on     " required
 
  " other stuff
  set number
- set relativenumber
  set smartcase "searches are case sensitive only if there are caps 
  set hlsearch
  set splitbelow
